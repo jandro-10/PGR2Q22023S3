@@ -36,10 +36,31 @@ class Program
 
         e.calcularPromedio();
 
+        EstudianteBecado e1 = new EstudianteBecado() {
+
+            nombre = "Cristiano",
+            apellido = "Ronaldo",
+            fechaNacimiento  = new DateTime (1985, 2, 5),
+            numeroCuenta = "T2891",
+            horasTrabajo = 90
+
+        };
+
+        e1.horasTrabajo += 10;
+
+        e1.listClases.Add(new Clase("Champion 2016", "10", 100));
+        e1.listClases.Add(new Clase("Champion 2008", "10", 100));
+        e1.calcularPromedio();
+
         Console.WriteLine(p.ToString());
         Console.WriteLine(e.ToString());
+
         Console.WriteLine(e.getTelefonos());
         Console.WriteLine(e.promedio);
+
+        Console.WriteLine(e1.ToString());
+        Console.WriteLine(e1.promedio); 
+
 
 
 
